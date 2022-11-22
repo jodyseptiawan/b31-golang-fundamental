@@ -1,0 +1,25 @@
+FORWARD ---------------------------------------------------------------------
+
+1. main.go (pkg/mysql, database/migration)
+
+--- router
+2. routers.go
+3. users.go
+
+--- handler
+4. users.go (dto,models)
+
+--- repositories
+5. users.go  (models)
+
+REVERSE  ---------------------------------------------------------------------
+
+--- repositories
+6. users.go (models)
+
+--- handler
+7. users.go (dto,models)
+
+--- router
+8. routers.go
+9. users.go

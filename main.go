@@ -1,8 +1,8 @@
 package main
 
 import (
-	// Import dumbmerch/database here ...
-	// Import dumbmerch/pkg/mysql here ...
+	"dumbmerch/database"
+	"dumbmerch/pkg/mysql"
 	"dumbmerch/routes"
 	"fmt"
 	"net/http"
@@ -12,8 +12,10 @@ import (
 
 func main() {
 	// initial DB here ...
+	mysql.DatabaseInit()
 
 	// Run migration here ...
+	database.RunMigration()
 	
 	r := mux.NewRouter()
 
